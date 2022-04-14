@@ -1,13 +1,12 @@
 import Main from '@/components/landing/Main';
-import Navigation from '@/molecules/Navigation';
+import { Page } from '@types';
 
-const Index = () => {
+const LandingPage: Page = () => {
   return (
-    <div className="flex flex-col h-screen">
-      <Navigation />
+    <>
       <Main />
-    </div>
+    </>
   );
 };
 
-export default Index;
+export default LandingPage;
