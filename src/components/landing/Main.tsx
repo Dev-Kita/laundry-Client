@@ -1,7 +1,7 @@
 import { FC, InputHTMLAttributes } from 'react';
 
-import Button from '../base/Button';
-import Container from './Container';
+import Button from '../../atoms/Button';
+import Container from '../Container';
 
 type MainType = FC<InputHTMLAttributes<HTMLInputElement>>;
 

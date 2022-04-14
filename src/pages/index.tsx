@@ -1,5 +1,5 @@
 import Main from '@/components/landing/Main';
-import Navigation from '@/components/landing/Navigation';
+import Navigation from '@/molecules/Navigation';
 
 const Index = () => {
   return (

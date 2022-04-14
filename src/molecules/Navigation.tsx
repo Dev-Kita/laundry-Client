@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import Hamburger from 'hamburger-react';
 
-import Button from '../base/Button';
-import Container from './Container';
-import MenuItem from './MenuItem';
+import Button from '../atoms/Button';
+import MenuItem from '../atoms/MenuItem';
+import Container from '../components/Container';
 
 const menus: Array<{ url: string; title: string }> = [
   {
