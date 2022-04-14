@@ -1,5 +1,7 @@
 import { FC, InputHTMLAttributes } from 'react';
 
+import Link from 'next/link';
+
 import Button from '../../atoms/Button';
 import Container from '../Container';
 
@@ -15,9 +17,11 @@ const Main: MainType = () => {
         Aplikasi yang menyediakan layanan manajemen laundry untuk pemilik usaha
       </p>
       <div className="mt-14">
-        <Button variant="outline" className="mr-4">
-          Cek Status
-        </Button>
+        <Link href={'#'} passHref>
+          <Button variant="outline" className="mr-4">
+            Cek Status
+          </Button>
+        </Link>
         <Button variant="white">About Laundry Kita</Button>
       </div>
     </Container>
