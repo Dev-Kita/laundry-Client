@@ -44,7 +44,11 @@ const Navigation = () => {
         {menus.map((i) => (
           <MenuItem key={i.title} title={i.title} url={i.url} />
         ))}
-        <Button variant="outline-primary" className="py-1 my-8 md:my-0 md:ml-8">
+        <Button
+          rounded
+          variant="outline-primary"
+          className="py-1 my-8 md:my-0 md:ml-8"
+        >
           Login
         </Button>
       </div>

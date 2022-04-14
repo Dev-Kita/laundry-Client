@@ -17,12 +17,14 @@ const Main: MainType = () => {
         Aplikasi yang menyediakan layanan manajemen laundry untuk pemilik usaha
       </p>
       <div className="mt-14">
-        <Link href={'#'} passHref>
-          <Button variant="outline" className="mr-4">
+        <Link href={'check-status'} passHref>
+          <Button variant="outline" className="mr-4" rounded>
             Cek Status
           </Button>
         </Link>
-        <Button variant="white">About Laundry Kita</Button>
+        <Button variant="white" rounded>
+          About Laundry Kita
+        </Button>
       </div>
     </Container>
   );

@@ -4,6 +4,7 @@ type ButtonVariant = 'primary' | 'white' | 'outline' | 'outline-primary';
 type IButton = React.FC<
   ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: ButtonVariant;
+    rounded?: boolean;
   }
 >;
 
@@ -20,13 +21,16 @@ const Button: IButton = ({
   className,
   children,
   type = 'button',
+  rounded = false,
   ...props
 }) => {
   return (
     <button
       type={type}
       title={title}
-      className={`m-2 p-2 px-5 rounded-3xl ${variantList[variant]} ${className} h-fit`}
+      className={`m-2 p-2 px-5 ${rounded ? 'rounded-3xl' : ''} ${
+        variantList[variant]
+      } ${className} h-fit`}
       {...props}
     >
       {children}
