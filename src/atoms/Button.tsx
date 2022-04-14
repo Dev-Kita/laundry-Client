@@ -1,12 +1,11 @@
 import { ButtonHTMLAttributes } from 'react';
 
 type ButtonVariant = 'primary' | 'white' | 'outline' | 'outline-primary';
-type IButton = React.FC<
-  ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: ButtonVariant;
-    rounded?: boolean;
-  }
->;
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  variant?: ButtonVariant;
+  rounded?: boolean;
+};
+export type ButtonType = React.FC<ButtonProps>;
 
 const variantList: Record<ButtonVariant, string> = {
   primary: 'text-white bg-blueMain',
@@ -15,8 +14,8 @@ const variantList: Record<ButtonVariant, string> = {
   'outline-primary': 'text-blueMain outline outline-blueMain',
 };
 
-const Button: IButton = ({
-  title = 'button',
+const Button: ButtonType = ({
+  title = 'Button',
   variant = 'primary',
   className,
   children,
@@ -28,9 +27,9 @@ const Button: IButton = ({
     <button
       type={type}
       title={title}
-      className={`m-2 p-2 px-5 ${rounded ? 'rounded-3xl' : ''} ${
-        variantList[variant]
-      } ${className} h-fit`}
+      className={`m-2 min-w-max p-2 px-5 ${
+        rounded ? 'rounded-3xl' : 'rounded-sm'
+      } ${variantList[variant]} ${className} h-fit`}
       {...props}
     >
       {children}
