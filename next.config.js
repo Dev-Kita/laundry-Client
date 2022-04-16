@@ -17,6 +17,10 @@ module.exports = withBundleAnalyzer({
   async rewrites() {
     return [
       {
+        source: '/',
+        destination: '/client/landing',
+      },
+      {
         source: '/admin/:path*',
         destination: '/admin/:path*',
       },
