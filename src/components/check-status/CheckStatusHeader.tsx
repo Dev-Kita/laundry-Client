@@ -3,19 +3,19 @@ import { FC } from 'react';
 import InputGroup from '@/molecules/InputGroup';
 
 type CheckStatusHeaderType = {
-  value: string;
-  onChange: (value: string) => void;
-  onSubmit: () => void;
+  onSubmit: (value: string) => void;
 };
 
 const CheckStatusHeader: FC<CheckStatusHeaderType> = (props) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    props.onSubmit();
-  };
+    // get search value
 
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    props.onChange(e.target.value);
+    const search = e.currentTarget.elements.namedItem(
+      'search'
+    ) as HTMLInputElement;
+
+    props.onSubmit(search.value);
   };
 
   return (
@@ -31,8 +31,6 @@ const CheckStatusHeader: FC<CheckStatusHeaderType> = (props) => {
         <InputGroup
           buttonProps={{ type: 'submit', children: 'Cek Status' }}
           inputProps={{
-            value: props.value,
-            onInput: handleInput,
             name: 'search',
             placeholder: 'Masukkan Token Transaksi...',
           }}

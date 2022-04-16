@@ -26,3 +26,33 @@ a:hover {
 .content ul {
   @apply my-6;
 }
+
+.step{
+  @apply flex relative flex-col items-center px-9 w-full;
+}
+
+.step.active .step__icon{
+  @apply bg-blueMain;
+}
+
+.step.active .step__text{
+  @apply text-blueMain;
+}
+
+.step:after{
+  @apply absolute top-14 z-10 -right-1/4 rounded-sm w-1/2 h-2 mr-1 bg-gray-400 content-[''];
+}
+.step.active:after{
+  @apply bg-blueMain;
+}
+
+.step:last-child{
+  @apply after:w-0;
+}
+
+.step__icon{
+  @apply flex justify-center items-center w-28 h-28  rounded-full bg-gray-400;
+}
+.step__text{
+  @apply mt-4 text-lg font-bold text-center text-gray-400 tracking-wide;
+}
