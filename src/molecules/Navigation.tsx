@@ -9,15 +9,15 @@ import Container from '../components/Container';
 const menus: Array<{ url: string; title: string }> = [
   {
     title: 'Home',
-    url: '#',
+    url: '/',
   },
   {
     title: 'About',
-    url: '#',
+    url: '/',
   },
   {
     title: 'Check Status',
-    url: '#',
+    url: '/check-status',
   },
 ];
 
