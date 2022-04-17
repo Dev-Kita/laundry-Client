@@ -1,11 +1,10 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, forwardRef } from 'react';
 
 type ButtonVariant = 'primary' | 'white' | 'outline' | 'outline-primary';
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   rounded?: boolean;
 };
-export type ButtonType = React.FC<ButtonProps>;
 
 const variantList: Record<ButtonVariant, string> = {
   primary: 'text-white bg-blueMain',
@@ -14,27 +13,35 @@ const variantList: Record<ButtonVariant, string> = {
   'outline-primary': 'text-blueMain outline outline-blueMain',
 };
 
-const Button: ButtonType = ({
-  title = 'Button',
-  variant = 'primary',
-  className,
-  children,
-  type = 'button',
-  rounded = false,
-  ...props
-}) => {
-  return (
-    <button
-      type={type}
-      title={title}
-      className={`m-2 min-w-max p-2 px-5 ${
-        rounded ? 'rounded-3xl' : 'rounded-sm'
-      } ${variantList[variant]} ${className} h-fit`}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      title = 'Button',
+      variant = 'primary',
+      className,
+      children,
+      type = 'button',
+      rounded = false,
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <button
+        ref={ref}
+        type={type}
+        title={title}
+        className={`m-2 min-w-max p-2 px-5 ${
+          rounded ? 'rounded-3xl' : 'rounded-sm'
+        } ${variantList[variant]} ${className} h-fit`}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
+
+Button.displayName = 'Button';
 
 export default Button;
