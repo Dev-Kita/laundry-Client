@@ -1,6 +1,6 @@
-import FooterSection from '@/components/landing/section/FooterSection';
-import HeadingSection from '@/components/landing/section/HeadingSection';
-import ServiceSection from '@/components/landing/section/ServiceSection';
+import FooterSection from '@/components/LandingPage/section/FooterSection';
+import HeadingSection from '@/components/LandingPage/section/HeadingSection';
+import ServiceSection from '@/components/LandingPage/section/ServiceSection';
 import { Page } from '@types';
 
 const Landing: Page = () => {
