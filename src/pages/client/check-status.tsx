@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import { NextPage } from 'next';
 
-import CheckStatusHeader from '@/components/check-status/CheckStatusHeader';
-import CheckStatusInitState from '@/components/check-status/CheckStatusInitState';
-import CheckStatusResultState from '@/components/check-status/result/CheckStatusResultState';
+import CheckStatusHeader from '@/components/CheckStatusPage/CheckStatusHeader';
+import CheckStatusInitState from '@/components/CheckStatusPage/CheckStatusInitState';
+import CheckStatusResultState from '@/components/CheckStatusPage/result/CheckStatusResultState';
 
 const CheckStatus: NextPage = () => {
   const [value, setValue] = useState('');
