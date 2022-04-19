@@ -2,24 +2,9 @@ import { useState } from 'react';
 
 import Hamburger from 'hamburger-react';
 
-import Button from '../atoms/Button';
-import MenuItem from '../atoms/MenuItem';
-import Container from '../components/Container';
-
-const menus: Array<{ url: string; title: string }> = [
-  {
-    title: 'Home',
-    url: '/',
-  },
-  {
-    title: 'About',
-    url: '/',
-  },
-  {
-    title: 'Check Status',
-    url: '/check-status',
-  },
-];
+import Button from '../../atoms/Button';
+import Container from '../../components/Container';
+import Menus from './Menus';
 
 const Navigation = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -41,9 +26,7 @@ const Navigation = () => {
           isMenuOpened ? 'flex' : 'hidden'
         } flex-col items-center bg-white gap-x-3 w-full md:bottom-0 md:flex md:flex-row md:justify-end`}
       >
-        {menus.map((i) => (
-          <MenuItem key={i.title} title={i.title} url={i.url} />
-        ))}
+        <Menus />
         <Button
           rounded
           variant="outline-primary"
