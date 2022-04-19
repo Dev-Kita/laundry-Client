@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import Container from '@/components/Container';
-import IconCircle from '@/components/LandingPage/atoms/IconCircle';
+import IconCircle from '@/components/LandingPage/ServiceSection/IconCircle';
 
 type ServiceType = {
   src: string;

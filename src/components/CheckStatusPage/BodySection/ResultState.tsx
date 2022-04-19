@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import ResultHeader from './ResultHeader';
 
-const CheckStatusResultState = () => {
+const ResultState = () => {
   const [currentStep] = useState(3);
 
   return (
@@ -20,4 +20,4 @@ const CheckStatusResultState = () => {
   );
 };
 
-export default CheckStatusResultState;
+export default ResultState;

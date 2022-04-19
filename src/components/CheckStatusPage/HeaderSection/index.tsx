@@ -2,11 +2,11 @@ import { FC } from 'react';
 
 import InputGroup from '@/molecules/InputGroup';
 
-type CheckStatusHeaderType = {
+type HeaderSectionType = {
   onSubmit: (value: string) => void;
 };
 
-const CheckStatusHeader: FC<CheckStatusHeaderType> = (props) => {
+const HeaderSection: FC<HeaderSectionType> = (props) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // get search value
@@ -41,4 +41,4 @@ const CheckStatusHeader: FC<CheckStatusHeaderType> = (props) => {
   );
 };
 
-export default CheckStatusHeader;
+export default HeaderSection;

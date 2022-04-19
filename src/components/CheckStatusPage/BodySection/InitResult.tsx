@@ -1,6 +1,6 @@
 import SearchIcon from '@/Icons/SearchIcon';
 
-const CheckStatusInitState = () => {
+const InitResult = () => {
   return (
     <>
       {/* detail */}
@@ -15,4 +15,4 @@ const CheckStatusInitState = () => {
   );
 };
 
-export default CheckStatusInitState;
+export default InitResult;
