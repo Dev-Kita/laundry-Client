@@ -9,11 +9,11 @@ const beforeClass =
 
 const MenuItem: MenuItemType = ({ url, title }) => {
   return (
-    <Link href={url}>
+    <Link href={url} passHref>
       <a
         title={`Menu ${title}`}
         role={'button'}
-        className={`${beforeClass} relative p-3  w-full h-full text-xl font-medium  hover:border-0 text-center flex justify-center bg-white before:rounded md:w-fit md:text-left`}
+        className={`${beforeClass} relative p-3  w-full h-full text-xl font-medium hover:border-0 text-center flex justify-center bg-white before:rounded md:w-fit`}
       >
         {title}
       </a>
