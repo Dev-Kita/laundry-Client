@@ -1,6 +1,6 @@
 import ServiceCard from './ServicesCard';
 
-const AboutPage = () => {
+const ServiceSection = () => {
   return (
     <>
       <h3 className="mb-10 text-2xl font-bold">LAYANAN</h3>
@@ -11,4 +11,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default ServiceSection;
