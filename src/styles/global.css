@@ -53,3 +53,8 @@ a {
 .step__text{
   @apply mt-4 text-lg font-bold text-center text-gray-400 tracking-wide;
 }
+
+.stroke-color {
+          fill: none;
+          stroke-width: 15px;
+        }
