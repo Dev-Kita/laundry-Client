@@ -1,6 +1,6 @@
 import SearchIcon from '@/Icons/SearchIcon';
 
-const InitResult = () => {
+const InitialStep = () => {
   return (
     <>
       {/* detail */}
@@ -15,4 +15,4 @@ const InitResult = () => {
   );
 };
 
-export default InitResult;
+export default InitialStep;

@@ -6,7 +6,7 @@ type HeaderSectionType = {
   onSubmit: (value: string) => void;
 };
 
-const HeaderSection: FC<HeaderSectionType> = (props) => {
+const Search: FC<HeaderSectionType> = (props) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // get search value
@@ -41,4 +41,4 @@ const HeaderSection: FC<HeaderSectionType> = (props) => {
   );
 };
 
-export default HeaderSection;
+export default Search;

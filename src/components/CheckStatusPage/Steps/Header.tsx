@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import DeliveryStep from './Steps/DeliveryStep';
-import DepositeStep from './Steps/DepositeStep';
-import FinishStep from './Steps/FinishStep';
-import ProcessStep from './Steps/ProcessStep';
+import DeliveryStep from './StepItems/DeliveryStep';
+import DepositeStep from './StepItems/DepositeStep';
+import FinishStep from './StepItems/FinishStep';
+import ProcessStep from './StepItems/ProcessStep';
 
-const ResultHeader: FC<{ currentStep: number }> = ({ currentStep }) => {
+const Header: FC<{ currentStep: number }> = ({ currentStep }) => {
   return (
     <>
       <svg
@@ -23,4 +23,4 @@ const ResultHeader: FC<{ currentStep: number }> = ({ currentStep }) => {
   );
 };
 
-export default ResultHeader;
+export default Header;
