@@ -40,8 +40,8 @@ const ServiceSection = () => {
   return (
     <Container className="py-24 bg-white">
       <section className={`flex items-center flex-col flex-1 text-white`}>
-        <h3 className="mb-14 text-2xl font-bold text-blueMain">Layanan</h3>
-        <div className="flex flex-wrap gap-6 justify-center items-center lg:gap-x-16">
+        <h3 className="mb-14 text-3xl font-bold text-blueMain">Layanan</h3>
+        <div className="flex flex-wrap gap-6 justify-center items-center mb-9 lg:gap-x-16">
           {services}
         </div>
       </section>

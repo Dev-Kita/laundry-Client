@@ -12,9 +12,9 @@ const IconCircle: FC<IconCircleType & ImageProps> = ({
 }) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="p-6 bg-blueMain rounded-full">
+      <div className="p-6 bg-blueMain rounded-full shadow-lg">
         <div
-          className={`flex relative text-white items-center justify-center h-16 w-16`}
+          className={`hover:scale-110 transition-all flex relative text-white items-center justify-center h-16 w-16`}
         >
           <Image src={src} alt={alt} layout="fill" />
         </div>
