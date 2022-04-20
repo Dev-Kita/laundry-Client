@@ -1,12 +1,15 @@
+import FeatureSection from '@/components/AboutPage/FeatureSection';
+import MitraSection from '@/components/AboutPage/MitraSection';
 import ServiceSection from '@/components/AboutPage/ServiceSection';
-import Container from '@/components/Container';
 import { Page } from '@types';
 
 const About: Page = () => {
   return (
-    <Container className="bg-blueMain">
+    <>
       <ServiceSection />
-    </Container>
+      <FeatureSection />
+      <MitraSection />
+    </>
   );
 };
 
