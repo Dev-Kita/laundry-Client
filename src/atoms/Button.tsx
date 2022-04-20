@@ -31,7 +31,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         type={type}
         title={title}
-        className={`m-2 min-w-max p-2 px-5 ${
+        className={`hover:shadow-md m-2 min-w-max p-2 px-5 ${
           rounded ? 'rounded-3xl' : 'rounded-sm'
         } ${variantList[variant]} ${className} h-fit`}
         {...props}
