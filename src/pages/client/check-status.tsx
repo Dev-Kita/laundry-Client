@@ -14,7 +14,7 @@ const CheckStatus: NextPage = () => {
   };
 
   return (
-    <div className="px-6 lg:px-44">
+    <div className="px-6 min-h-screen lg:px-44">
       <div className="flex flex-col items-center">
         <HeaderSection onSubmit={onSubmit} />
         <div className="mt-10 w-full">

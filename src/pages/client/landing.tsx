@@ -9,6 +9,7 @@ const Landing: Page = () => {
       <HeadingSection />
       <ServiceSection />
       <FooterSection />
+      <hr />
     </>
   );
 };
